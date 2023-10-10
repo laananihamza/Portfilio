@@ -16,3 +16,11 @@ html {
 div#about {
     scroll-behavior: smooth;
 }
+
+.Typewriter {
+    display: inline;
+}
+
+.Typewriter__cursor {
+    color: #1b73f4;
+}
