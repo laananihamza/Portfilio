@@ -24,3 +24,12 @@ div#about {
 .Typewriter__cursor {
     color: #1b73f4;
 }
+
+.link-section {
+    box-shadow: -20px -3px 147px 393px #0000007d !important;
+    transition-property: right;
+}
+
+.empty-box {
+    background-image: linear-gradient(145deg, #e2e8ec, #ffffff);
+}
