@@ -24,7 +24,7 @@ function HomeSection() {
                     }}
                 /></div>
                 
-                <p className="name-text text-gray-600 my-3">
+                <div className="name-text text-gray-600 my-3 min-h-[130px]">
                 <Typewriter
                     
                     onInit={(typewriter) => {
@@ -39,7 +39,7 @@ function HomeSection() {
                         }
                     }
                 />
-                </p>
+                </div>
                 <div className="cv-link my-10">
                     <a href="/files/CV_LAANANI_HAMZA_EN.pdf" download={true} className="bg-blueHover px-7 lg:px-14 py-3 rounded-md text-white duration-200 border-2 border-blueHover hover:text-blueHover hover:bg-white">My CV</a>
                     <a href="#portfolio" className="border-2 border-blueHover px-2 lg:px-8 py-3 rounded-md mx-3 duration-200 text-blueHover hover:bg-blueHover hover:text-white">See My Works</a>

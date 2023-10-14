@@ -13,7 +13,6 @@ function Header({ activeSection }) {
     }else {
       setPosition(false)
     }
-    console.log('1');
   }
   const onScroll = () => {
     requestAnimationFrame(headerScroll)
