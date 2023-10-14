@@ -7,7 +7,7 @@ function HomeSection() {
             <div className="w-full flex flex-col md:flex-row items-center gap-5">
             <div className="leftside w-full sm:w-9/12 md:w-1/2 text-center md:text-left ">
                 <p className="welcome-text uppercase font-medium">Welcome to my portfolio</p>
-                <div className="name-text text-[1.7rem] sm:text-4xl md:text-[1.6rem] lg:text-[2.3rem] xl:text-5xl font-semibold my-1 !leading-[1.3]">Hi, I am <span className=" text-blueHover">Hamza Laanani</span> a <Typewriter
+                <div className="name-text text-[1.7rem] sm:text-4xl md:text-[1.6rem] lg:text-[2.3rem] xl:text-5xl 2xl:text-6xl font-semibold my-1 !leading-[1.3]">Hi, I am <span className=" text-blueHover">Hamza Laanani</span> a <Typewriter
                     
                     onInit={(typewriter) => {
                         typewriter
@@ -24,7 +24,7 @@ function HomeSection() {
                     }}
                 /></div>
                 
-                <div className="name-text text-gray-600 my-3 min-h-[130px]">
+                <div className="name-text text-base 2xl:text-lg text-gray-600 my-3 min-h-[130px]">
                 <Typewriter
                     
                     onInit={(typewriter) => {
