@@ -13,6 +13,26 @@ html {
     scroll-behavior: smooth;
 }
 
+body {
+    position: relative;
+}
+
+.scroll-to-top {
+    -webkit-animation: roll-in-blurred-bottom 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+    animation: roll-in-blurred-bottom 1.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
+
+.scroll-to-top.down {
+
+    -webkit-animation: roll-out-bottom .4s ease-in both;
+    animation: roll-out-bottom .4s ease-in both;
+    /* transition-delay: .5s; */
+}
+
+div#home.active {
+    padding-top: calc(2.5rem + 72px);
+}
+
 div#about {
     scroll-behavior: smooth;
 }
@@ -32,4 +52,34 @@ div#about {
 
 .empty-box {
     background-image: linear-gradient(145deg, #e2e8ec, #ffffff);
+}
+
+@keyframes roll-in-blurred-bottom {
+    0% {
+        -webkit-transform: translateY(800px) rotate(720deg);
+        transform: translateY(800px) rotate(720deg);
+        -webkit-filter: blur(50px);
+        filter: blur(50px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateY(0) rotate(0deg);
+        transform: translateY(0) rotate(0deg);
+        opacity: 1;
+    }
+}
+
+@keyframes roll-out-bottom {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: rotate(380deg);
+        transform: rotate(380deg);
+        opacity: 0;
+    }
 }
