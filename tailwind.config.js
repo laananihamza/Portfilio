@@ -5,7 +5,9 @@ export default {
     extend: {
       colors : {
         'blueHover' : '#1b73f4',
-      'violetHover' : '#e80dfd',
+        'violetHover' : '#e80dfd',
+        'darkBlueHover' : '#2428cc',
+        'lightBlueHover' : '#7376ff',
       }
     },
   },

@@ -11,6 +11,8 @@
     --violetHover: #e80dfd;
     --gr-left-gray: #e2e8ec;
     --gr-right-gray: #ffffff;
+    --darkBlueHover: #2428cc;
+    --lightBlueHover: #7376ff;
 }
 
 * {
@@ -72,16 +74,126 @@ div#about {
     z-index: -1;
     width: 100%;
     height: 100%;
-    transition: .3s;
     border-radius: 12px;
-    background-image: linear-gradient(145deg, var(--blueHover), var(--violetHover));
+    background-image: linear-gradient(145deg, var(--blueHover), var(--lightBlueHover));
 }
+
+.empty-box.about-me.a1::before {
+    transition-duration: .3s;
+    transition-delay: 0.1s;
+}
+
+.empty-box.about-me.a1.stop::before {
+    transition-duration: .3s;
+    transition-delay: 3.3s;
+}
+
+.empty-box.about-me.a2::before {
+    transition-duration: .3s;
+    transition-delay: 1.1s;
+}
+
+.empty-box.about-me.a2.stop::before {
+    transition-duration: .3s;
+    transition-delay: 2.2s;
+}
+
+.empty-box.about-me.a3::before {
+    transition-duration: .3s;
+    transition-delay: 2.2s;
+}
+
+.empty-box.about-me.a3.stop::before {
+    transition-duration: .3s;
+    transition-delay: 1.2s;
+}
+
+.empty-box.about-me.a4::before {
+    transition-duration: .3s;
+    transition-delay: 3.3s;
+}
+
+.empty-box.about-me.a4.stop::before {
+    transition-duration: .3s;
+    transition-delay: .1s;
+}
+
+
+.empty-box.about-me span::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -6;
+    width: 0%;
+    height: 100%;
+    transition-duration: 1s;
+    border-radius: 12px;
+    background-image: linear-gradient(145deg, var(--blueHover), var(--lightBlueHover));
+}
+
+.empty-box.about-me.a1 span::before {
+    left: -2px;
+}
+
+.empty-box.about-me.a2 span::before {
+    width: 100%;
+    height: 0%;
+    top: -2px;
+}
+
+
+.empty-box.about-me.a1.start span::before {
+    transition-delay: 0.4s;
+}
+
+.empty-box.about-me.a1.stop span::before {
+    transition-delay: 3.3s;
+}
+
+.empty-box.about-me.a2.start span::before {
+    transition-delay: 2.5s;
+}
+
+.empty-box.about-me.a2.stop span::before {
+    transition-delay: 2.2s;
+}
+
+.empty-box.about-me.a3.start span::before {
+    transition-delay: 4.7s;
+}
+
+.empty-box.about-me.a3.stop span::before {
+    transition-delay: 1.2s;
+}
+
+.empty-box.about-me.a4 span::before {
+    transition-delay: 3.3s;
+}
+
+.empty-box.about-me.a4.stop span::before {
+    transition-delay: .1s;
+}
+
 
 .empty-box.about-me.a1:hover::after {
-    background-image: linear-gradient(10deg, var(--violetHover), var(--blueHover));
+    background-image: linear-gradient(10deg, var(--lightBlueHover), var(--blueHover));
 }
 
-.empty-box.about-me:hover::before {
+.empty-box.about-me.a1.start span::before {
+    width: 100%;
+}
+
+.empty-box.about-me.a2.start span::before {
+    height: 100%;
+}
+
+.empty-box.about-me.a3.start span::before {
+    width: 100%;
+}
+
+
+.empty-box.about-me.start::before {
     opacity: 1;
 }
 
@@ -96,7 +208,6 @@ div#about {
 .empty-box.about-me.a4 {
     background-image: linear-gradient(-145deg, var(--gr-right-gray), var(--gr-left-gray));
 }
-
 
 
 /* .empty-box.about-me.a1::after,
