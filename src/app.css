@@ -85,7 +85,11 @@ div#about {
 
 .empty-box.about-me.a1.stop::before {
     transition-duration: .3s;
-    transition-delay: 3.3s;
+    transition-delay: 1s;
+}
+
+.empty-box.about-me.a1.stop p {
+    transition-delay: 1.2s;
 }
 
 .empty-box.about-me.a2::before {
@@ -95,7 +99,7 @@ div#about {
 
 .empty-box.about-me.a2.stop::before {
     transition-duration: .3s;
-    transition-delay: 2.2s;
+    transition-delay: .7s;
 }
 
 .empty-box.about-me.a3::before {
@@ -105,12 +109,12 @@ div#about {
 
 .empty-box.about-me.a3.stop::before {
     transition-duration: .3s;
-    transition-delay: 1.2s;
+    transition-delay: .5s;
 }
 
 .empty-box.about-me.a4::before {
     transition-duration: .3s;
-    transition-delay: 3.3s;
+    transition-delay: 3.7s;
 }
 
 .empty-box.about-me.a4.stop::before {
@@ -119,7 +123,7 @@ div#about {
 }
 
 
-.empty-box.about-me span::before {
+.empty-box.about-me>span::before {
     content: '';
     position: absolute;
     top: 0;
@@ -128,50 +132,49 @@ div#about {
     width: 0%;
     height: 100%;
     transition-duration: 1s;
-    border-radius: 12px;
     background-image: linear-gradient(145deg, var(--blueHover), var(--lightBlueHover));
 }
 
-.empty-box.about-me.a1 span::before {
+.empty-box.about-me.a1>span::before {
     left: -2px;
 }
 
-.empty-box.about-me.a2 span::before {
+.empty-box.about-me.a2>span::before {
     width: 100%;
     height: 0%;
     top: -2px;
 }
 
 
-.empty-box.about-me.a1.start span::before {
+.empty-box.about-me.a1.start>span::before {
     transition-delay: 0.4s;
 }
 
-.empty-box.about-me.a1.stop span::before {
+.empty-box.about-me.a1.stop>span::before {
+    transition-delay: .8s;
+}
+
+.empty-box.about-me.a2.start>span::before {
+    transition-delay: 1.5s;
+}
+
+.empty-box.about-me.a2.stop>span::before {
+    transition-delay: .5s;
+}
+
+.empty-box.about-me.a3.start>span::before {
+    transition-delay: 2.7s;
+}
+
+.empty-box.about-me.a3.stop>span::before {
+    transition-delay: .3s;
+}
+
+.empty-box.about-me.a4>span::before {
     transition-delay: 3.3s;
 }
 
-.empty-box.about-me.a2.start span::before {
-    transition-delay: 2.5s;
-}
-
-.empty-box.about-me.a2.stop span::before {
-    transition-delay: 2.2s;
-}
-
-.empty-box.about-me.a3.start span::before {
-    transition-delay: 4.7s;
-}
-
-.empty-box.about-me.a3.stop span::before {
-    transition-delay: 1.2s;
-}
-
-.empty-box.about-me.a4 span::before {
-    transition-delay: 3.3s;
-}
-
-.empty-box.about-me.a4.stop span::before {
+.empty-box.about-me.a4.stop>span::before {
     transition-delay: .1s;
 }
 
@@ -180,15 +183,15 @@ div#about {
     background-image: linear-gradient(10deg, var(--lightBlueHover), var(--blueHover));
 }
 
-.empty-box.about-me.a1.start span::before {
+.empty-box.about-me.a1.start>span::before {
     width: 100%;
 }
 
-.empty-box.about-me.a2.start span::before {
+.empty-box.about-me.a2.start>span::before {
     height: 100%;
 }
 
-.empty-box.about-me.a3.start span::before {
+.empty-box.about-me.a3.start>span::before {
     width: 100%;
 }
 
@@ -245,22 +248,48 @@ div#about {
     background-image: linear-gradient(90deg, var(--gr-left-gray), #e7e7e7);
 } */
 
-.empty-box.about-me.a1 span,
-.empty-box.about-me.a2 span {
+.empty-box.about-me.a1>span,
+.empty-box.about-me.a2>span {
     background-image: linear-gradient(90deg, #e7e7e7, var(--gr-left-gray));
 }
 
-.empty-box.about-me.a3 span {
+.empty-box.about-me.a3>span {
     background-image: linear-gradient(-90deg, #e7e7e7, var(--gr-left-gray));
 }
 
 @media (max-width : 768px) {
-    .empty-box.about-me.a1::after {
-        left: 50%;
-        top: 100%;
-        transform: translateX(-50%);
-        height: 80%;
-        width: 10px;
+    .empty-box.about-me.a1>span {
+        left: 50% !important;
+        top: 100% !important;
+        transform: translateX(-50%) !important;
+        height: 80% !important;
+        width: 8px !important;
+    }
+
+    .empty-box.about-me.a1>span::before {
+        height: 0% !important;
+        width: 8px !important;
+    }
+
+    .empty-box.about-me.a1.start>span::before {
+        height: 100% !important;
+    }
+
+    .empty-box.about-me.a3>span {
+        left: 50% !important;
+        top: -30% !important;
+        transform: translateX(-50%) rotate(180deg) !important;
+        height: 80% !important;
+        width: 8px !important;
+    }
+
+    .empty-box.about-me.a3>span::before {
+        height: 0% !important;
+        width: 10px !important;
+    }
+
+    .empty-box.about-me.a3.start>span::before {
+        height: 100% !important;
     }
 }
 
