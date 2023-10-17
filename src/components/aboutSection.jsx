@@ -5,8 +5,6 @@ function AboutSection() {
     window.addEventListener('scroll', () => {
         if (window.scrollY >= document.getElementById('about').offsetTop + 10) {
             setIsAbout(true)
-        }else {
-            setIsAbout(false)
         }
     })
     return (
@@ -16,7 +14,7 @@ function AboutSection() {
                 <p className="text-4xl w-full md:text-6xl -z-10 font-medium uppercase absolute top-4 left-1/2 -translate-x-1/2 text-gray-200">About Me</p>
             </div>
             <div className="content mt-28 grid grid-cols-1 justify-items-center gap-y-32 md:grid-cols-2 md:gap-28 lg:gap-32 xl:gap-40 2xl:gap-52">
-                <div className={`empty-box ${isAbout ? "start" : "stop"} about-me duration-200 a1 relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[350px]`}>
+                <div className={`empty-box ${isAbout ? "start" : ""} about-me duration-200 a1 relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[350px]`}>
                     <span className={`absolute -z-[6] inline-block w-8/12 h-2 top-1/2 left-full`}></span>
                     <p className={`title relative delay-100 duration-200 text-2xl text-center font-bold before:absolute before:bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-white  before:duration-200 before:w-3/12 before:h-0.5 p-3 ${isAbout ? "text-white" : "text-black"}`}>My personal information</p>
                     <p className={`title duration-200 delay-100 p-3 ${isAbout ? "text-white" : "text-black"}`}><span className="font-bold">Name :</span> Hamza Laanani</p>
@@ -25,7 +23,7 @@ function AboutSection() {
                     <p className={`title duration-200 delay-100 p-3 ${isAbout ? "text-white" : "text-black"}`}><span className="font-bold">Email :</span> <a href="mailto:laanani.hamza02@gmail.com">laanani.hamza02@gmail.com</a></p>
                     <p className={`title duration-200 delay-100 p-3 ${isAbout ? "text-white" : "text-black"}`}><span className="font-bold">Phone :</span> <a href="tel:+212679504484">+212 679-504484</a></p>
                 </div>
-                <div className={`empty-box ${isAbout ? "start" : "stop"} about-me duration-300 delay-1000 a2 relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}>
+                <div className={`empty-box ${isAbout ? "start" : ""} about-me duration-300 delay-1000 a2 relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}>
                 <p className={`title relative duration-200 delay-1000 text-2xl font-bold px-5 pt-5 pb-1 ${isAbout ? "text-white" : "text-black"} flex justify-between`}> <span>Complete high school</span> <span>2020</span> </p>
                 <p className={`title relative duration-200 delay-1000 text-base px-5 pb-8 ${isAbout ? "text-white" : "text-black"}`}>(Hassan Ibn Tabit High School)</p>
                 <p className={`title relative duration-200 delay-1000 px-5 ${isAbout ? "text-white" : "text-black"}`}>
@@ -34,13 +32,20 @@ function AboutSection() {
                 </p>
                     <span className={`absolute -z-[6] inline-block w-2 h-4/6 left-1/2 top-full`}></span>
                 </div>
-                <div className={`empty-box ${isAbout ? "start" : "stop"} about-me duration-300 delay-[1.1s] ${screen.width < 800 ? "a3" : "a4"} relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}></div>
-                <div className={`empty-box ${isAbout ? "start" : "stop"} about-me duration-300 delay-[2.1s] ${screen.width < 800 ? "a4" : "a3"} relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}>
+                <div className={`empty-box ${isAbout ? "start" : ""} about-me duration-300 delay-[1.1s] ${screen.width < 800 ? "a3" : "a4"} relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}>
+                <p className={`title relative duration-200 delay-[3.7s] text-2xl font-bold px-5 pt-5 pb-1 ${isAbout ? "text-white" : "text-black"} flex justify-between items-center`}> <span>Associate Degree Web Full Stack</span> <span className="text-lg inline-block w-4/12">2021 - 2023</span> </p>
+                <p className={`title relative duration-200 delay-[3.7s] text-base px-5 pb-8 ${isAbout ? "text-white" : "text-black"}`}>(ISTA NTIC OFPPT)</p>
+                <p className={`title relative duration-200 delay-[3.7s] px-5 pb-5 ${isAbout ? "text-white" : "text-black"}`}>
+                I hold a two-year Associate Degree in Web Full Stack, which has equipped me with a comprehensive understanding of front-end and back-end web development. This program provided me with a strong foundation in programming languages, web design, and database management, enabling me to create dynamic and user-friendly websites and applications.
+                </p>
+                </div>
+                <div className={`empty-box ${isAbout ? "start" : ""} about-me duration-300 delay-[2.1s] ${screen.width < 800 ? "a4" : "a3"} relative z-[3] w-11/12  shadow-lg rounded-xl min-h-[300px]`}>
                     <span className={`absolute -z-[6] inline-block w-[41.8%] h-2 top-1/2 left-0 rotate-180 -translate-x-full`}></span>
-                <p className={`title relative duration-200 delay-1000 text-2xl font-bold px-5 pt-5 pb-1 ${isAbout ? "text-white" : "text-black"} flex justify-between`}> <span>Qadi Iyad Marrakech</span> <span>2021</span> </p>
-                <p className={`title relative duration-200 delay-1000 text-base px-5 pb-8 ${isAbout ? "text-white" : "text-black"}`}>(Law at the FSJES faculty)</p>
-                <p className={`title relative duration-200 delay-1000 px-5 ${isAbout ? "text-white" : "text-black"}`}>
-                    
+                <p className={`title relative duration-200 delay-[2.2s] text-2xl font-bold px-5 pt-5 pb-1 ${isAbout ? "text-white" : "text-black"} flex justify-between`}> <span>Law at the FSJES faculty</span> <span>2021</span> </p>
+                <p className={`title relative duration-200 delay-[2.2s] text-base px-5 pb-8 ${isAbout ? "text-white" : "text-black"}`}>(Qadi Iyad Marrakech)</p>
+                <p className={`title relative duration-200 delay-[2.2s] px-5 pb-5 ${isAbout ? "text-white" : "text-black"}`}>
+                I pursued a one-year course in law, demonstrating my commitment to gaining a comprehensive understanding of the legal field. This educational experience has equipped me with essential knowledge in areas such as legal principles, contracts, and dispute resolution, further enhancing my analytical and problem-solving skills. 
+                It has also instilled in me a profound appreciation for the importance of ethics, justice, and the rule of law in our society
                 </p>
                 </div>
             </div>

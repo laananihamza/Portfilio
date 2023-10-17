@@ -6,6 +6,7 @@ import { useEffect, useRef, useState } from "react"
 function Header({ activeSection }) {
   const [position, setPosition] = useState(false)
   const [openMenu, setOpenMenu] = useState(false)
+  const [section, setSection] = useState(activeSection)
   const header = useRef()
   const headerScroll = () => {
     if (window.scrollY > 200) {
@@ -27,6 +28,9 @@ function Header({ activeSection }) {
   }, []);
 
   useEffect(() => {
+    setSection(activeSection)
+  }, [activeSection])
+  useEffect(() => {
     document.addEventListener('click', (e) => {
       if (!document.querySelector('.link-section').contains(e.target) && !document.querySelector('.bars').contains(e.target)) {
         setOpenMenu(false)
@@ -39,12 +43,12 @@ function Header({ activeSection }) {
       <div className="logo text-blueHover text-2xl font-black">L</div>
       <div className="links">
         <ul className="hidden md:flex gap-5 text-sm uppercase font-medium">
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'home' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#home">Home</a></li>
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'about' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#about" >About</a></li>
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'resume' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#resume">Resume</a></li>
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'skills' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#skills" >Skills</a></li>
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'portfolio' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#portfolio">Portfolio</a></li>
-          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-violetHover ${activeSection === 'contact' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#contact">Contact</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'home' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#home">Home</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'about' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#about" >About</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'resume' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#resume">Resume</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'skills' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#skills" >Skills</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'portfolio' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#portfolio">Portfolio</a></li>
+          <li className={`relative before:absolute before:-bottom-2 before:left-1/2 before:-translate-x-1/2 before:bg-gradient-to-br before:from-blueHover before:to-darkBlueHover ${section === 'contact' ? 'before:w-full' : 'before:w-0'} before:duration-200 hover:before:w-full before:h-0.5`}><a href="#contact">Contact</a></li>
         </ul>
         <div className="mobile-links block md:hidden">
           <FontAwesomeIcon icon={faBars} onClick={() => setOpenMenu(true)} size="lg" className="bars cursor-pointer" />

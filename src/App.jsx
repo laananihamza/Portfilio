@@ -11,7 +11,19 @@ function App() {
   window.addEventListener('scroll', () => {
     if (window.scrollY < 200) {
       setSection('home')
-    }else {
+    }else if (window.scrollY >= document.getElementById('about')?.offsetTop + 10) {
+      setSection('about');
+    
+    } else if (window.scrollY >= document.getElementById('resume')?.offsetTop + 10) {
+      setSection('resume');
+    } else if (window.scrollY >= document.getElementById('skills')?.offsetTop + 10) {
+      setSection('skills');
+    } else if (window.scrollY >= document.getElementById('portfolio')?.offsetTop + 10) {
+      setSection('portfolio');
+    } else if (window.scrollY >= document.getElementById('contact')?.offsetTop + 10) {
+      setSection('contact');
+    }
+    else {
       setSection(window?.location?.hash.replace('#', ''));
     }
     if (window.scrollY > 300 ) {
